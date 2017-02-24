@@ -1,0 +1,77 @@
+1. Write a program to accepts two numbers from stdin and find all the odd as well as even
+numbers present in between them.
+
+import java.util.*;
+class Odev
+{
+
+public static void main(String[] args)
+{
+int[] oarr=new int[100];
+int[] earr=new int[100];
+int l=0,h=0;
+Scanner sc=new Scanner(System.in);
+int ii=sc.nextInt();
+int kk=sc.nextInt();
+for(int j=ii;j<=kk;j++)
+{
+if(j%2==0)
+{
+earr[l]=j;
+l++;
+}
+else
+{
+oarr[h]=j;
+h++;
+}
+}
+System.out.println("Odd numbers are:");
+for(int p=0;p<oarr.length;p++)
+{
+    if(oarr[p]!=0)
+System.out.println(oarr[p]);
+}
+System.out.println("Even numbers are:");
+for(int p=0;p<earr.length;p++)
+{
+     if(earr[p]!=0)
+System.out.println(earr[p]);
+}
+}
+}
+
+
+2. Joe is scared to go to school. When her dad asked the reason, joe said she is unable to
+complete the task given by her teacher. The task was to find the “first 10 multiples” of the
+number entered from stdin.
+
+import java.util.*;
+class Main
+{
+
+public static void main(String[] args)
+{
+
+Scanner sc=new Scanner(System.in);
+int numb1=sc.nextInt();
+for(int j=1;j<=10;j++)
+{
+    System.out.println(numb1+"*"+j+"="+(numb1*j));
+}
+}
+}
+
+3. Write a program consisting method sum() and demonstrate the concept of method overloading using this method.
+
+import java.util.*;
+class Sum{  
+static int sum(int a,int b){return a+b;}  
+static int sum(int a,int b,int c){return a+b+c;}  
+}  
+class Overloading{  
+public static void main(String[] args){  
+System.out.println(Sum.sum(4,5));  
+System.out.println(Sum.sum(4,9,5));  
+}
+}  
